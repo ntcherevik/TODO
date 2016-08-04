@@ -10,6 +10,9 @@ config(['$locationProvider', '$routeProvider',
         when('/add', {
             template: '<add-form></add-form>'
         }).
+        when('/edit/:id', {
+            template: '<edit-form></edit-form>'
+        }).
         otherwise('/list');
     }
 ]);

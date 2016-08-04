@@ -19,6 +19,20 @@ router.get('/items/:id', function(req, res, next) {
     }
 });
 
+router.post('/items/:id', function(req, res, next) {
+    var id = req.params.id;
+    var item = todo.todoList.find(function(item) {
+        return item.id === id;
+    });
+    if (item) {
+        item.item = req.body.item;
+        item.date = req.body.date;
+        res.json(item);
+    } else {
+        res.sendStatus(404);
+    }
+});
+
 router.post('/items', function(req, res, next) {
     var item = {
         id: uuid.v4(),
