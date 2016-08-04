@@ -1,0 +1,30 @@
+doctype html
+html(ng-app="todoApp")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title TODO
+        link(href='/bs/css/bootstrap.min.css', rel='stylesheet')
+        link(href='/stylesheets/style.css', rel='stylesheet')
+        script(src='/angular/angular.min.js')
+        script(src='/angular-route/angular-route.min.js')
+        script(src='/angular-resource/angular-resource.min.js')
+        script(src='app.services.js')
+        script(src='app.todo.js')
+        script(src='app.todo.config.js')
+        script(src='todo-list/todo-list.component.js')
+        script(src='add-form/add-form.component.js')
+
+    body
+        nav.navbar.navbar-default.navbar-fixed-top
+            .container
+                .navbar-header
+                    a.navbar-brand(href='#') TODO
+                .collapse.navbar-collapse
+
+        .container
+            div(ng-view)
+
+        script(src='/jquery/jquery.min.js')
+        script(src='/bs/js/bootstrap.min.js')

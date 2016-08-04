@@ -1,0 +1,12 @@
+<div class="row" style="margin-bottom:20px;">
+    <div class="col-xs-12">
+        <a href="#!/add">Add an item</a>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <tr ng-repeat="item in items">
+        <td>{{item.item}}</td>
+        <td>{{item.date}}</td>
+    </tr>
+</table>
